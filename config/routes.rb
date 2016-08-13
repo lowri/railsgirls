@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments, :only => [:create, :update, :destroy]
   devise_for :users
   get 'pages/info'
   get 'pages/contact'
